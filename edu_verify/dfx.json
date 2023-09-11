@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "edu_verify_backend": {
+      "main": "src/edu_verify_backend/main.mo",
+      "type": "motoko"
+    },
+    "edu_verify_frontend": {
+      "dependencies": [
+        "edu_verify_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/edu_verify_frontend/src/index.html"
+      },
+      "source": [
+        "src/edu_verify_frontend/assets",
+        "dist/edu_verify_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
